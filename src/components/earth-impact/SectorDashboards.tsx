@@ -1,6 +1,7 @@
 import { Sprout, Activity, Wind, Thermometer, ArrowUpRight, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { useNavigate } from 'react-router-dom';
 
 const sectors = [
     {
@@ -42,12 +43,18 @@ const sectors = [
 ];
 
 const SectorDashboards = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {sectors.map((sector) => {
                 const Icon = sector.icon;
                 return (
-                    <div key={sector.title} className="glass-card p-5 group cursor-pointer hover:border-primary/30 transition-all duration-300">
+                    <div
+                        key={sector.title}
+                        onClick={() => sector.title === 'Agriculture' && navigate('/earth-impact/agriculture')}
+                        className="glass-card p-5 group cursor-pointer hover:border-primary/30 transition-all duration-300"
+                    >
                         <div className="flex justify-between items-start mb-4">
                             <div className="flex items-center gap-3">
                                 <div className={cn("p-2.5 rounded-xl bg-background/50 border border-white/5", sector.color)}>
