@@ -9,6 +9,7 @@ import Events from "./pages/Events";
 import Weather from "./pages/Weather";
 import Missions from "./pages/Missions";
 import Community from "./pages/Community";
+import EarthImpact from "./pages/EarthImpact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/weather" element={<Weather />} />
             <Route path="/missions" element={<Missions />} />
             <Route path="/community" element={<Community />} />
+            <Route path="/earth-impact" element={<EarthImpact />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
