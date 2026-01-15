@@ -55,6 +55,8 @@ const SectorDashboards = () => {
                         onClick={() => {
                             if (sector.title === 'Agriculture') navigate('/earth-impact/agriculture');
                             if (sector.title === 'Disaster Management') navigate('/earth-impact/disaster-management');
+                            if (sector.title === 'Pollution') navigate('/earth-impact/pollution');
+                            if (sector.title === 'Climate') navigate('/earth-impact/climate');
                         }}
                         className="glass-card p-5 group cursor-pointer hover:border-primary/30 transition-all duration-300"
                     >

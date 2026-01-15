@@ -12,6 +12,8 @@ import Community from "./pages/Community";
 import EarthImpact from "./pages/EarthImpact";
 import Agriculture from "./pages/Agriculture";
 import DisasterManagement from "./pages/DisasterManagement";
+import Pollution from "./pages/Pollution";
+import Climate from "./pages/Climate";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +34,8 @@ const App = () => (
             <Route path="/earth-impact" element={<EarthImpact />} />
             <Route path="/earth-impact/agriculture" element={<Agriculture />} />
             <Route path="/earth-impact/disaster-management" element={<DisasterManagement />} />
+            <Route path="/earth-impact/pollution" element={<Pollution />} />
+            <Route path="/earth-impact/climate" element={<Climate />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
