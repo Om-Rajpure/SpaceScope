@@ -15,7 +15,7 @@ const sectors = [
     },
     {
         icon: Activity,
-        title: 'Disaster Mgmt',
+        title: 'Disaster Management',
         stat: 'Active',
         statLabel: '2 Storms Tracked',
         desc: 'Real-time cyclone pathing for Pacific region.',
@@ -52,7 +52,10 @@ const SectorDashboards = () => {
                 return (
                     <div
                         key={sector.title}
-                        onClick={() => sector.title === 'Agriculture' && navigate('/earth-impact/agriculture')}
+                        onClick={() => {
+                            if (sector.title === 'Agriculture') navigate('/earth-impact/agriculture');
+                            if (sector.title === 'Disaster Management') navigate('/earth-impact/disaster-management');
+                        }}
                         className="glass-card p-5 group cursor-pointer hover:border-primary/30 transition-all duration-300"
                     >
                         <div className="flex justify-between items-start mb-4">
